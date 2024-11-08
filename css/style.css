@@ -1,0 +1,50 @@
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTop.show {
+    opacity: 1;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg); /* Start the progress from the top */
+}
+
+.progress-ring-bg {
+    fill: none;
+    stroke: #e0e0e0; /* Light grey background circle */
+    stroke-width: 4;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: #00aaff; /* Light blue progress color */
+    stroke-width: 4;
+    stroke-dasharray: 176; /* Circumference of the circle (2 * PI * radius) */
+    stroke-dashoffset: 176;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.arrow {
+    position: relative;
+    z-index: 1;
+    color: #00aaff; /* Light blue arrow */
+    font-size: 24px;
+    line-height: 1;
+}
